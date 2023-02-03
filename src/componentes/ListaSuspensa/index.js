@@ -6,7 +6,7 @@ return(
     <div className ='Lista-suspensa'>
         <label>{props.label}</label>
         <select required ={props.obrigatorio}>
-           {props.itens.map((item, ) => {
+           {props.itens.map((item) => {
            return<option key={item}>{item}</option>})} 
         </select>
     </div>

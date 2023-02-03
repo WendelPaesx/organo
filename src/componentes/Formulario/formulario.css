@@ -1,0 +1,37 @@
+.formulario {
+    display: flex;
+    justify-content: center;
+    margin: 80px 100px;
+    font-family: 'prata';
+    flex-direction: column;
+    padding: 40px;
+
+
+
+
+}
+
+.formulario form {
+    padding: 36px 64px;
+    max-width: 80%;
+    background: #F7F7F7;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.formulario h2 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.formulario div {
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    
+}
+.formulario div h2{
+    
+    color: #6278F7;
+    
+}

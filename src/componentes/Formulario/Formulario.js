@@ -5,7 +5,7 @@ import './formulario.css'
 import { useState } from 'react'
 
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const times = [
         'Programação',
@@ -22,7 +22,13 @@ const Formulario = () => {
     const [Time, setTime] = useState('')
 
     const aoSalvar = (evento) => {
-        console.log('form foi submetido=>',Nome,Cargo,Imagem,Time);
+        
+        props.aoColaboradorCadastrado({
+            Nome,
+            Cargo,
+            Imagem,
+            Time
+        })
         evento.preventDefault()
     }
     return (

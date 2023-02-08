@@ -1,8 +1,8 @@
-import './time.css'
+import './Time.css'
 
 const Time = (props)=>{
     return(
-        <section>
+        <section className='time'>
             <h3>{props.nome}</h3>
         </section>
     )

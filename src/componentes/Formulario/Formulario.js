@@ -8,12 +8,19 @@ import { useState } from 'react'
 const Formulario = (props) => {
 
     const times = [
+        
         'Programação',
+        
         'Front-End',
+        
         'Data Science',
+        
         'DevOps',
+        
         'UX e Design',
+        
         'Mobile',
+        
         'Inovação e Gestão'
     ]
     const [Nome, setNome] = useState('')

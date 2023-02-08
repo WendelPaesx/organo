@@ -6,27 +6,67 @@ import Time from './componentes/Time';
 
 function App() {
 
-  const [colaboradores,setColaboradores ]= useState([])
+  const times = [
+    {
+      nome: 'Programação',
+      corPrimaria: '#57c278',
+      corSecundaria: '#D9F7E9'
 
-  const aoNovoColaboradorAdicionado=(colaborador)=>{
+    },
+  {
+      nome: 'Front-End',
+      corPrimaria: '#82CFFA',
+      corSecundaria: '#E8F8FF'
+
+    },
+  {
+      nome: 'Data Science',
+      corPrimaria: '#A6D157',
+      corSecundaria: '#F0F8E2'
+
+    },
+  {
+      nome: 'DevOps',
+      corPrimaria: '#E06B69',
+      corSecundaria: '#FDE7E8'
+
+    },
+  {
+      nome: 'UX e Design',
+      corPrimaria: '#DB6EBF',
+      corSecundaria: '#FAE9F5'
+
+    },
+  {
+      nome: 'Mobile',
+      corPrimaria: '#FFBA05',
+      corSecundaria: '#FFF5D9'
+
+    },
+  {
+      nome: 'Inovação e Gestão',
+      corPrimaria: '#FF8A09',
+      corSecundaria: '#FFEEDF'
+
+    }
+
+  ]
+
+  const [colaboradores, setColaboradores] = useState([])
+
+  const aoNovoColaboradorAdicionado = (colaborador) => {
     console.log(colaborador);
     colaboradores.push(colaborador)
-    setColaboradores([...colaboradores,colaborador])
+    setColaboradores([...colaboradores, colaborador])
 
   }
   return (
     <div className="App">
-      <Banner/>
-      <Formulario aoColaboradorCadastrado={colaborador=> aoNovoColaboradorAdicionado(colaborador) }/>
-      <Time nome="Programação"/>
-      <Time nome="FrontEnd"/>
-      <Time nome="Data Science"/>
-      <Time nome="DevOps"/>
-      <Time nome="UX e Design"/>
-      <Time nome="Mobile"/>
-      <Time nome="Inovação e Gestão"/>
+      <Banner />
+      <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
+      {times.map(time => <Time key={time.nome} nome={time.nome}/>)}
 
-      
+
     </div>
   );
 }

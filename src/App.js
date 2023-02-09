@@ -71,6 +71,7 @@ function App() {
           corPrimaria={time.corPrimaria}
           corSecundaria={time.corSecundaria}
           colaboradores={colaboradores}
+          
         />)}
 
 

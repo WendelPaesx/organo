@@ -57,9 +57,7 @@ const Formulario = (props) => {
                     Criar Card
                 </Botao>
             </form>
-            <div>
-                <h2>Minha Organização</h2>
-            </div>
+           
 
 
         </section>

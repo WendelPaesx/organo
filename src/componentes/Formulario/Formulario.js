@@ -7,21 +7,25 @@ import { useState } from 'react'
 
 const Formulario = (props) => {
 
-    
-    const [Nome, setNome] = useState('')
-    const [Cargo, setCargo] = useState('')
-    const [Imagem, setImagem] = useState('')
-    const [Time, setTime] = useState('')
+
+    const [nome, setNome] = useState('')
+    const [cargo, setCargo] = useState('')
+    const [imagem, setImagem] = useState('')
+    const [time, setTime] = useState('')
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        
+
         props.aoColaboradorCadastrado({
-            Nome,
-            Cargo,
-            Imagem,
-            Time
+            nome,
+            cargo,
+            imagem,
+            time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
     return (
         <section className="formulario" >
@@ -31,33 +35,33 @@ const Formulario = (props) => {
                     label="Nome"
                     obrigatorio={true}
                     placeholder="Digite seu nome"
-                    valor={Nome}
+                    valor={nome}
                     aoAlterado={valor => setNome(valor)}
                 />
                 <CampoTexto
                     label="Cargo"
                     obrigatorio={true}
                     placeholder="Digite seu cargo"
-                    valor={Cargo}
+                    valor={cargo}
                     aoAlterado={valor => setCargo(valor)}
                 />
                 <CampoTexto
                     label="Imagem"
                     placeholder="Digite o endereço da imagem"
-                    valor={Imagem}
+                    valor={imagem}
                     aoAlterado={valor => setImagem(valor)}
                 />
                 <ListaSuspensa
                     label="time"
                     obrigatorio={true}
-                    itens={props.nomeDosTimes}
-                    valor={Time}
+                    itens={props.Times}
+                    valor={time}
                     aoAlterado={valor => setTime(valor)} />
                 <Botao>
                     Criar Card
                 </Botao>
             </form>
-           
+
 
 
         </section>

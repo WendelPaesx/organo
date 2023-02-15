@@ -1,4 +1,4 @@
-import 'rodape.css'
+import './Rodape.css'
 
 function Rodape() {
 
@@ -7,7 +7,7 @@ function Rodape() {
             <ul>
                 <li>
                     <a href='facebook.com' target='_blank' alt ='Pagina do Facebook'>
-                        <img src="/imagens/facebook.png"></img>
+                        <img src="/imagens/fb.png"></img>
                     </a>
                     
                 </li>
@@ -17,7 +17,7 @@ function Rodape() {
             <ul>
                 <li>
                     <a href='twitter.com' target='_blank' alt ='Pagina do Twitter'>
-                        <img src='/imagens/twitter.png'></img>
+                        <img src='./imagens/tw.png' alt='icone twitter'></img>
                     </a>
                 </li>
             </ul>
@@ -26,7 +26,7 @@ function Rodape() {
             <ul>
                 <li>
                     <a href='instagram.com' target='_blank' alt ='Pagina do instagram'>
-                        <img src='/imagens/instagram.png'></img>
+                        <img src='./imagens/ig.png' alt='icone insta'></img>
                     </a>
                 </li>
             </ul>
@@ -36,7 +36,7 @@ function Rodape() {
         </section>
         <section>
             <p>
-                Desenvolvido Por <a href=''></a>
+                Desenvolvido Por <a href='https://github.com/WendelPaesx' target='_blank'>WendelPaesx</a>
             </p>
         </section>
 

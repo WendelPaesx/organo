@@ -73,14 +73,14 @@ function App() {
       <Formulario Times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
 
 
-      {times.map(time =>
+      {times.map((time,indice) =>
         <Time
-          key={time.nome}
+          key={indice}
           nome={time.nome}
           corPrimaria={time.corPrimaria}
           corSecundaria={time.corSecundaria}
           colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
-          aoDeletar ={deletarColaborador}
+          
         />)
       }
 
